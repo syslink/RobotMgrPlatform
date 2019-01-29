@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.pirobot.rmp.model">
+	<class name="CIMSession" table="t_rmp_cimsession">
+		<id column="gid" length="128" name="gid"
+			type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property column="nid"  name="nid" type="java.lang.Long" />
+		<property column="deviceId"  length="128" name="deviceId" type="java.lang.String" />
+		<property column="hostAddress"  length="64" name="host" type="java.lang.String" />
+		<property column="channel"  length="32" name="channel" type="java.lang.String" />
+		<property column="deviceModel"  length="32" name="deviceModel" type="java.lang.String" />
+		<property column="deviceName"  length="32" name="deviceName" type="java.lang.String" />
+		<property column="clientVersion"  length="32" name="clientVersion" type="java.lang.String" />
+		<property column="systemVersion"  length="32" name="systemVersion" type="java.lang.String" />
+		<property column="bindTime"  name="bindTime" type="java.lang.Long" />
+		<property column="longitude"  name="longitude" type="java.lang.Double" />
+		<property column="latitude"  name="latitude" type="java.lang.Double" />
+		<property column="location"  length="100" name="location" type="java.lang.String" />
+		<property column="status"  name="status" type="java.lang.Integer" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.pirobot.rmp.model">
+	<class name="Message" table="t_rmp_message">
+		<id column="mid" length="128" name="mid"
+			type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property column="action"  name="action" type="java.lang.String"  length="32"/>
+		<property column="content"  length="320" name="content" type="java.lang.String" />
+		<property column="sender"  length="64" name="sender" type="java.lang.String" />
+		<property column="receiver"  length="64" name="receiver" type="java.lang.String" />
+		<property column="format"  length="10" name="format" type="java.lang.String" />
+		<property column="state"  length="1" name="state" type="java.lang.String" />
+		<property column="timestamp"  name="timestamp" type="java.lang.Long" />
+	</class>
+</hibernate-mapping>
